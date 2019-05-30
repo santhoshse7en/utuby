@@ -1,0 +1,9 @@
+vaderSentiment
+textblob
+beautifulsoup4
+requests
+cssselect
+lxml
+pandas
+setuptools
+twine

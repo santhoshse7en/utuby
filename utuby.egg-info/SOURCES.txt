@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+utuby/__init__.py
+utuby/utils.py
+utuby/utuby.py
+utuby/youtube_comments.py
+utuby/youtube_video_info.py
+utuby.egg-info/PKG-INFO
+utuby.egg-info/SOURCES.txt
+utuby.egg-info/dependency_links.txt
+utuby.egg-info/requires.txt
+utuby.egg-info/top_level.txt
