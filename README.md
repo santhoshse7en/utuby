@@ -1,86 +1,111 @@
 [![PyPI Version](https://img.shields.io/pypi/v/utuby.svg)](https://pypi.org/project/utuby)
-[![Coverage Status](https://coveralls.io/repos/github/santhoshse7en/utuby/badge.svg?branch=master)](https://coveralls.io/github/santhoshse7en/utuby?branch=master)
 [![License](https://img.shields.io/pypi/l/utuby.svg)](https://pypi.python.org/pypi/utuby/)
-[![Documentation Status](https://readthedocs.org/projects/pip/badge/?version=latest&style=flat)](https://santhoshse7en.github.io/utuby_doc)
+[![Documentation Status](https://readthedocs.org/projects/pip/badge/?version=latest\&style=flat)](https://santhoshse7en.github.io/utuby_doc)
+[![Downloads](https://pepy.tech/badge/utuby/month)](https://pepy.tech/project/utuby)
 
-# utuby
+# 🎥 utuby
 
-YouTube's API is annoying to work with, and has lots of limitations. utuby is a simple script for downloading Youtube comments without using the Youtube API - No API rate limits. No restrictions. Extremely fast.
+YouTube’s official API is restrictive 😤 — rate limits, quotas, API keys...
+**utuby** is a fast and simple Python tool that scrapes YouTube **comments** without using the API —
+✅ No rate limits,
+✅ No keys,
+✅ No restrictions.
 
-| Source         | Link                                         |
-| ---            |  ---                                         |
-| PyPI:          | https://pypi.org/project/utuby/             |
-| Repository:    | https://github.com/santhoshse7en/utuby/     |
-| Documentation: | https://santhoshse7en.github.io/utuby_doc/  |
+---
 
+## 🔗 Project Links
 
-## Dependencies
+|  Source        |  Link                                                     |
+| ---------------- | ----------------------------------------------------------- |
+| 🐍 PyPI          | [utuby on PyPI](https://pypi.org/project/utuby/)            |
+| 🛠 Repository    | [GitHub Repo](https://github.com/santhoshse7en/utuby/)      |
+| 📚 Documentation | [Read the Docs](https://santhoshse7en.github.io/utuby_doc/) |
 
-* beautifulsoup4
-* requests
-* lxml
-* cssselect
-* vaderSentiment
-* textblob
-* pandas
+---
 
+## 📦 Dependencies
 
-## Dependencies Installation
+* `beautifulsoup4`
+* `requests`
+* `lxml`
+* `cssselect`
+* `vaderSentiment`
+* `textblob`
+* `pandas`
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install following
+---
+
+## 📥 Installation
+
+Install the required dependencies using pip:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-## A Glance
+---
 
-Download it by clicking the green download button here on Github. You only need to parse specific YouTube URL as argument.
-
-```python
->>> from utuby.utuby import youtube
-
->>> url = 'https://www.youtube.com/watch?v=xjQFi-HP7po'
-
->>> youtube = youtube(url)
-```
-
-Directory of youtube class
+## ⚙️ Quick Start
 
 ```python
->>> print(dir(youtube))
+from utuby.utuby import youtube
+
+url = "https://www.youtube.com/watch?v=xjQFi-HP7po"
+youtube = youtube(url)
 ```
 
-![ytdir](https://user-images.githubusercontent.com/47944792/58631120-20cba880-82ff-11e9-92be-300d2714d37a.PNG)
+---
 
-**Examples for Extracting YouTube Channel Name**
+## 🔍 Features & Examples
+
+### 🧭 Explore Available Methods
+
+```python
+print(dir(youtube))
+```
+
+![Directory](https://user-images.githubusercontent.com/47944792/58631120-20cba880-82ff-11e9-92be-300d2714d37a.PNG)
+
+---
+
+### 📺 Get Channel Name
 
 ```python
 >>> youtube.channel_name
-
 'Fully'
 ```
 
-**Examples Calculating Sentiment Scores for extracted YouTube Comments**
+---
+
+### 🧠 Sentiment Analysis of Comments
 
 ```python
 >>> youtube.final_sentiment_scores
-
 {'neu': 0.769, 'neg': 0.051, 'pos': 0.178, 'compound': 0.0}
 ```
 
-**Youtube Comments DataFrame**
+---
+
+### 📊 View YouTube Comments as DataFrame
 
 ```python
 >>> youtube.youtube_comments_df.head()
 ```
 
-![ytdf](https://user-images.githubusercontent.com/47944792/58631134-2c1ed400-82ff-11e9-8575-2b362ed28cb7.PNG)
+![DataFrame](https://user-images.githubusercontent.com/47944792/58631134-2c1ed400-82ff-11e9-8575-2b362ed28cb7.PNG)
 
-## Contributing
+---
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## 🤝 Contributing
 
-Please make sure to update tests as appropriate.
+Contributions are welcome! 🛠️
+For major changes, please open an issue first to discuss what you’d like to improve or add.
+✅ Don’t forget to update or add tests accordingly.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/) 🪪
+
+---
